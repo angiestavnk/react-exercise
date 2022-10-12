@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { PrimaryButton } from "../button";
 import { COLUMN, GRID } from "../utils/constants";
 import styles from "./style.module.css";
 
@@ -31,7 +32,7 @@ export const GridPage = ({ variant }) => {
 
   return (
     <div className={styles.container}>
-      {showButton && <button className={styles.btn} onClick={changeView}>Change layout</button>}
+      {showButton && <PrimaryButton onClick={changeView}>Change View</PrimaryButton>}
       <div className={styles.contentContainer} style={displayStyle}>
         <div className={`${styles.item1} ${styles.item}`} style={itemStyle.item} />
         <div className={`${styles.item2} ${styles.item}`} style={itemStyle.item} />

@@ -1,10 +1,14 @@
+import { StyleContextProvider } from './context/StyleConext';
 import { GridPage } from './grid';
 import { COLUMN, GRID } from './utils/constants';
 
 function App() {
   const variant = GRID;
+
   return (
-    <GridPage variant={variant} />
+    <StyleContextProvider>
+      <GridPage variant={variant} />
+    </StyleContextProvider>
   );
 }
 
