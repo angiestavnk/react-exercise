@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const StyleContext = createContext();
 
@@ -13,9 +13,14 @@ const useStyleContext = () => {
 };
 
 const StyleContextProvider = ({ children }) => {
+  const [fontSize, setFontSize] = useState('22px');
+  const [color, setColor] = useState('black');
+  
   const data = {
-    fontSize: '24px',
-    color: 'black'
+    fontSize: fontSize,
+    setFontSize: setFontSize,
+    color: color,
+    setColor: setColor
   }
 
   return (

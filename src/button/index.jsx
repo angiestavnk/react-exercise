@@ -2,7 +2,10 @@ import { useStyleContext } from "../context/StyleConext";
 import styles from "./style.module.css";
 
 export const PrimaryButton = ({ children, onClick }) => {
-  const { fontSize, color } = useStyleContext();
+  const { fontSize, setFontSize, color, setColor } = useStyleContext();
+
+  setFontSize('18px');
+  setColor('white');
 
   return (
     <button
