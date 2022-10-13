@@ -20,7 +20,6 @@ export const GridPage = ({ variant }) => {
 
   const itemStyle = {
     item: {
-      width: displayState === COLUMN && "250px",
       height: displayState === COLUMN && "250px"
     }
   };
